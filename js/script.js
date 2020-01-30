@@ -4,29 +4,30 @@
 // se è > di 5 il quadrato diventa verde.
 // Il numero ottenuto appare al centro del quadrato.
 // I quadrati fateli prima a mano e poi con javascript.
-
-$('.border').click(
-  function () {
-    $(this).addClass('square');
-    $.ajax({
-      url: "https://flynn.boolean.careers/exercises/api/random/int",
-      method: "GET",
-      success: function (data, stato) {
-        var numero = data.response;
-        console.log(numero);
-        if (numero <= 5) {
-          $('.square').text(numero)
-          $('.square').addClass('yellow')
-          $('.yellow').removeClass('square').removeClass('green')
-        } else {
-          $('.square').text(numero)
-          $('.square').addClass('green')
-          $('.green').removeClass('square').removeClass('yellow')
+$(document).ready (function () {
+  $('.border').click(
+    function () {
+      $(this).addClass('square');
+      $.ajax({
+        url: "https://flynn.boolean.careers/exercises/api/random/int",
+        method: "GET",
+        success: function (data, stato) {
+          var numero = data.response;
+          console.log(numero);
+          if (numero <= 5) {
+            $('.square').text(numero)
+            $('.square').addClass('yellow')
+            $('.yellow').removeClass('square').removeClass('green')
+          } else {
+            $('.square').text(numero)
+            $('.square').addClass('green')
+            $('.green').removeClass('square').removeClass('yellow')
+          }
+        },
+        error: function (richiesta, stato, errori) {
+          alert("E' avvenuto un errore. " + errore);
         }
-      },
-      error: function (richiesta, stato, errori) {
-        alert("E' avvenuto un errore. " + errore);
-      }
-    });
-  }
-)
+      });
+    }
+  )
+});
