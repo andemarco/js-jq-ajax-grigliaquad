@@ -19,3 +19,9 @@ I quadrati fateli prima a mano e poi con javascript. */
 .green {
   background-color: green;
 }
+.border{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}

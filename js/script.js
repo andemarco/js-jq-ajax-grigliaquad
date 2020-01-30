@@ -15,13 +15,13 @@ $('.border').click(
         var numero = data.response;
         console.log(numero);
         if (numero <= 5) {
+          $('.square').text(numero)
           $('.square').addClass('yellow')
           $('.yellow').removeClass('square')
-          $('.yellow').text(numero)
         } else {
+          $('.square').text(numero)
           $('.square').addClass('green')
           $('.green').removeClass('square')
-          $('.green').text(numero)
         }
       },
       error: function (richiesta, stato, errori) {
