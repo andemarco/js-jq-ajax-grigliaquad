@@ -4,13 +4,15 @@ Se è <= 5 il quadrato diventa giallo,
 se è > di 5 il quadrato diventa verde.
 Il numero ottenuto appare al centro del quadrato.
 I quadrati fateli prima a mano e poi con javascript. */
-
-.flex {
+.container {
   display: flex;
+  width: 400px;
+  height: 400px;
+  flex-wrap: wrap;
 }
 .border {
-  height: calc(400px/6);
-  width: calc(400px/6);
+  height: calc(98%/6);
+  width: calc(90%/6);
   border: 1px solid black;
   display: flex;
   justify-content: center;
