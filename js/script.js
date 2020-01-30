@@ -7,17 +7,22 @@
 
 $('.border').click(
   function () {
+    $(this).addClass('square');
     $.ajax({
       url: "https://flynn.boolean.careers/exercises/api/random/int",
       method: "GET",
       success: function (data, stato) {
         var numero = data.response;
-        $(this).text(numero);
-            if (numero <= 5) {
-              $(this).addClass('yellow');
-            }else {
-              $(this).addClass('red');
-            }
+        console.log(numero);
+        if (numero <= 5) {
+          $('.square').addClass('yellow')
+          $('.yellow').removeClass('square')
+          $('.yellow').text(numero)
+        } else {
+          $('.square').addClass('green')
+          $('.green').removeClass('square')
+          $('.green').text(numero)
+        }
       },
       error: function (richiesta, stato, errori) {
         alert("E' avvenuto un errore. " + errore);
