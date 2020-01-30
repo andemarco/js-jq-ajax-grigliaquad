@@ -17,11 +17,11 @@ $('.border').click(
         if (numero <= 5) {
           $('.square').text(numero)
           $('.square').addClass('yellow')
-          $('.yellow').removeClass('square')
+          $('.yellow').removeClass('square').removeClass('green')
         } else {
           $('.square').text(numero)
           $('.square').addClass('green')
-          $('.green').removeClass('square')
+          $('.green').removeClass('square').removeClass('yellow')
         }
       },
       error: function (richiesta, stato, errori) {

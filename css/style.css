@@ -14,9 +14,15 @@ I quadrati fateli prima a mano e poi con javascript. */
   border: 1px solid black;
 }
 .yellow {
+  height: calc(400px/6);
+  width: calc(400px/6);
+  border: 1px solid black;
   background-color: yellow;
 }
 .green {
+  height: calc(400px/6);
+  width: calc(400px/6);
+  border: 1px solid black;
   background-color: green;
 }
 .border{
